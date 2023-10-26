@@ -1,0 +1,23 @@
+<section class="single-category p-5">
+  <div class="container">
+    <div class="col-md-8">
+      <h1>{{ category }}</h1>
+      <p>
+        {{ categoryDesc }}
+      </p>
+    </div>
+  </div>
+</section>
+<section class="container mt-5">
+  <div class="row">
+    <div
+      class="col-md-4 mt-3 d-flex justify-content-center"
+      *ngFor="let loop of categoryData"
+    >
+      <app-post-card
+        [routerLink]="['/post', loop.id]"
+        [postData]="loop"
+      ></app-post-card>
+    </div>
+  </div>
+</section>

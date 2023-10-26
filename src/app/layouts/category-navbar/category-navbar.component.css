@@ -1,0 +1,27 @@
+nav {
+  margin-top: 100px;
+  background-color: var(--navbar-footer-color);
+
+}
+
+.nav-link {
+  text-transform: uppercase;
+}
+
+.nav-button {
+  transition: 0.4s;
+}
+
+.nav-button:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nav-button:active {
+  background-color: red;
+  color: var(--secondary-color);
+  transition: 0ms;
+}

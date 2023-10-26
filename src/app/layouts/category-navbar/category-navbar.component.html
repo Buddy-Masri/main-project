@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container justify-content-lg-center">
+    <a class="navbar-brand d-lg-none primary-font-color">Categories</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="true"
+      aria-label="Toggle navigation"
+      (click)="toggleMenu()"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse flex-grow-0 my-3"
+      id="navbarSupportedContent"
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item" *ngFor="let loop of data">
+          <a
+            class="nav-link ml-3 nav-button"
+            [routerLink]="['/category', loop.data.category]"
+            [queryParams]="{
+              'description': loop.data.description,
+              'id': loop.id
+            }"
+          >
+            {{ loop.data.category }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

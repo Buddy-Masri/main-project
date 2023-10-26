@@ -1,0 +1,53 @@
+<section class="featured-section">
+  <div class="container-fluid">
+    <div class="row flex-column">
+      <div class="col-md-12 text-center mt-5">
+        <h2 class="text-white">Discover Our Featured Posts</h2>
+        <p class="text-white">
+          Stay updated with the latest trends, discover hidden gems, and uncover
+          unique perspectives. This section is the gateway to an enriching
+          online experience, where knowledge meets creativity, and stories come
+          to life.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="col-sm-12 col-lg-3 col-md-6 mt-4 mb-4 me-0"
+        *ngFor="let loop of featuredPosts"
+      >
+        <app-post-card
+          [postData]="loop"
+          [routerLink]="['/post', loop.id]"
+        ></app-post-card>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container mt-5">
+  <div class="row flex-column align-items-center">
+    <div class="col-md-9 text-center">
+      <h3 style="color: var(--primary-color)">
+        Stay Up-to-Date with Our Latest Posts
+      </h3>
+      <p>
+        Here, you'll find a dynamic stream of our freshest articles, updates,
+        and stories. We're committed to keeping you informed and engaged,
+        offering a real-time connection to the pulse of our ever-evolving
+        topics.
+      </p>
+      <hr />
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mt-3" *ngFor="let loop of latestPosts">
+        <app-post-card
+          (click)="updateData(loop.id, loop.data.views)"
+          [postData]="loop"
+          [routerLink]="['/post', loop.id]"
+        ></app-post-card>
+      </div>
+    </div>
+  </div>
+</section>

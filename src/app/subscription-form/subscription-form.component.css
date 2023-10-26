@@ -1,0 +1,20 @@
+.card {
+  background-color: var(--secondary-color);
+  padding: 0 50px 0 50px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+}
+
+.btn{
+  width: 100%;
+  min-width: 100px;
+  
+}
+
+.btn:active{
+  background-color: var(--primary-color);
+  color: white;
+}
